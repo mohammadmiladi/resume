@@ -238,6 +238,9 @@ export default {
   justify-content: space-between;
   align-items: center;
 }
+.skill-name:hover {
+  background: #ededff;
+}
 @media only screen and (max-width: 576px) {
   .main-style {
     padding: 5px;
