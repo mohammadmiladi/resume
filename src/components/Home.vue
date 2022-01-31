@@ -19,6 +19,13 @@
                 <div>Location-Region : Tehran</div>
                 <div>Work Exprience : 9 years</div>
                 <div>Military Service Status : Exemption during education</div>
+                <div class="mt-3">EDUCATION:</div>
+                <div>
+                  2018 – Present: Strategic Management - Master's degree
+                </div>
+                <div>
+                  2011 – 2017: Industrial Engineering - Bachelor's degree
+                </div>
               </div>
             </div>
           </div>
@@ -42,10 +49,82 @@
                 technologies, my interest in programming increased day by day.
               </div>
             </div>
-             <div class="right-title">
+            <div class="right-title">
               <div>My Soft Skills</div>
               <div class="right-underline"></div>
             </div>
+            <div>
+              <b-row class="w-100 mb-3" style="justify-content: space-between">
+                <b-col lg="3" class="soft-skill">Project management</b-col>
+                <b-col lg="3" class="soft-skill">Strong decision maker</b-col>
+                <b-col lg="3" class="soft-skill">Complex problem solver</b-col>
+              </b-row>
+              <b-row class="w-100" style="justify-content: space-between">
+                <b-col lg="3" class="soft-skill">Teamwork</b-col>
+                <b-col lg="3" class="soft-skill">Fast Learner</b-col>
+                <b-col lg="3" class="soft-skill">Motivated</b-col>
+              </b-row>
+            </div>
+            <div class="right-title">
+              <div>My Programming Skills</div>
+              <div class="right-underline"></div>
+            </div>
+            <b-row class="w-100 mb-3" style="justify-content: space-between">
+              <b-col lg="3" class="d-flex align-items-center skill-name">
+                <div>HTML</div>
+                <div></div>
+              </b-col>
+              <b-col lg="3" class="d-flex align-items-center skill-name">
+                <div>CSS</div>
+                <div></div>
+              </b-col>
+              <b-col lg="3" class="d-flex align-items-center skill-name">
+                <div>JAVASCRIPT</div>
+                <div></div>
+              </b-col>
+            </b-row>
+            <b-row class="w-100 mb-3" style="justify-content: space-between">
+              <b-col lg="3" class="d-flex align-items-center skill-name">
+                <div>Vue.js</div>
+                <div></div>
+              </b-col>
+              <b-col lg="3" class="d-flex align-items-center skill-name">
+                <div>Nuxt.js</div>
+                <div></div>
+              </b-col>
+              <b-col lg="3" class="d-flex align-items-center skill-name">
+                <div>VueX</div>
+                <div></div>
+              </b-col>
+            </b-row>
+            <b-row class="w-100 mb-3" style="justify-content: space-between">
+              <b-col lg="3" class="d-flex align-items-center skill-name">
+                <div>Bootstrap</div>
+                <div></div>
+              </b-col>
+              <b-col lg="3" class="d-flex align-items-center skill-name">
+                <div>Git</div>
+                <div></div>
+              </b-col>
+              <b-col lg="3" class="d-flex align-items-center skill-name">
+                <div>Jira</div>
+                <div></div>
+              </b-col>
+            </b-row>
+            <b-row class="w-100" style="justify-content: space-between">
+              <b-col lg="3" class="d-flex align-items-center skill-name">
+                <div>React</div>
+                <div></div>
+              </b-col>
+              <b-col lg="3" class="d-flex align-items-center skill-name">
+                <div>Redux</div>
+                <div></div>
+              </b-col>
+              <b-col lg="3" class="d-flex align-items-center skill-name">
+                <div>SignalR</div>
+                <div></div>
+              </b-col>
+            </b-row>
           </div>
         </b-col>
       </b-row>
@@ -81,7 +160,7 @@ export default {};
   min-height: 550px;
 }
 .blue-block {
-  background-color: rgb(130 72 252);
+  background-color: rgb(0 97 217);
   width: 85%;
   height: 35px;
 }
@@ -95,7 +174,7 @@ export default {};
 .name-style {
   font-weight: 700;
   font-size: 30px;
-  color: rgb(56 0 174);
+  color: rgb(15 56 149);
 }
 .image-style {
   margin-top: 20px;
@@ -114,17 +193,48 @@ export default {};
   margin-bottom: 20px;
   margin-top: 20px;
   font-weight: 700;
-  color: rgb(56 0 174);
+  color: rgb(15 56 149);
 }
 .right-underline {
-  width: 90%;
+  width: 100%;
   height: 2px;
   margin-top: 5px;
-  background-color: rgb(130 72 252);
+  background-color: rgb(0 97 217);
 }
 .my-story {
   font-size: 16px;
   line-height: 26px;
   text-align: justify;
+}
+.soft-skill {
+  height: 35px;
+  border: 1px solid #ababff;
+  border-left: 5px solid rgb(0 97 217);
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  justify-content: flex-start;
+  font-weight: 700;
+  padding-left: 5px;
+}
+.skill-name {
+  height: 35px;
+  padding-left: 5px;
+  border: 1px solid #ababff;
+  border-left: 5px solid rgb(0 97 217);
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 700;
+}
+@media only screen and (max-width: 576px) {
+  .main-style {
+    padding: 5px;
+  }
+  .right-side {
+    margin-top: 20px;
+  }
+  .soft-skill {
+    margin-bottom: 20px;
+  }
 }
 </style>
