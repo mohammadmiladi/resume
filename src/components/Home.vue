@@ -72,57 +72,57 @@
             <b-row class="w-100 mb-3" style="justify-content: space-between">
               <b-col lg="3" class="d-flex align-items-center skill-name">
                 <div>HTML</div>
-                <div></div>
+                <div><Stars :rate="85" /></div>
               </b-col>
               <b-col lg="3" class="d-flex align-items-center skill-name">
                 <div>CSS</div>
-                <div></div>
+                <div><Stars :rate="85" /></div>
               </b-col>
               <b-col lg="3" class="d-flex align-items-center skill-name">
                 <div>JAVASCRIPT</div>
-                <div></div>
+                <div><Stars :rate="75" /></div>
               </b-col>
             </b-row>
             <b-row class="w-100 mb-3" style="justify-content: space-between">
               <b-col lg="3" class="d-flex align-items-center skill-name">
                 <div>Vue.js</div>
-                <div></div>
+                <div><Stars :rate="85" /></div>
               </b-col>
               <b-col lg="3" class="d-flex align-items-center skill-name">
                 <div>Nuxt.js</div>
-                <div></div>
+                <div><Stars :rate="70" /></div>
               </b-col>
               <b-col lg="3" class="d-flex align-items-center skill-name">
                 <div>VueX</div>
-                <div></div>
+                <div><Stars :rate="70" /></div>
               </b-col>
             </b-row>
             <b-row class="w-100 mb-3" style="justify-content: space-between">
               <b-col lg="3" class="d-flex align-items-center skill-name">
                 <div>Bootstrap</div>
-                <div></div>
+                <div><Stars :rate="80" /></div>
               </b-col>
               <b-col lg="3" class="d-flex align-items-center skill-name">
                 <div>Git</div>
-                <div></div>
+                <div><Stars :rate="60" /></div>
               </b-col>
               <b-col lg="3" class="d-flex align-items-center skill-name">
                 <div>Jira</div>
-                <div></div>
+                <div><Stars :rate="60" /></div>
               </b-col>
             </b-row>
             <b-row class="w-100" style="justify-content: space-between">
               <b-col lg="3" class="d-flex align-items-center skill-name">
                 <div>React</div>
-                <div></div>
+                <div><Stars :rate="50" /></div>
               </b-col>
               <b-col lg="3" class="d-flex align-items-center skill-name">
                 <div>Redux</div>
-                <div></div>
+                <div><Stars :rate="30" /></div>
               </b-col>
               <b-col lg="3" class="d-flex align-items-center skill-name">
                 <div>SignalR</div>
-                <div></div>
+                <div><Stars :rate="30" /></div>
               </b-col>
             </b-row>
           </div>
@@ -133,7 +133,12 @@
 </template>
 
 <script>
-export default {};
+import Stars from "../components/Stars.vue";
+export default {
+  components: {
+    Stars,
+  },
+};
 </script>
 
 <style scoped>
@@ -216,6 +221,10 @@ export default {};
   justify-content: flex-start;
   font-weight: 700;
   padding-left: 5px;
+  cursor: pointer;
+}
+.soft-skill:hover {
+  background: #ededff;
 }
 .skill-name {
   height: 35px;
@@ -225,6 +234,9 @@ export default {};
   border-radius: 5px;
   font-size: 16px;
   font-weight: 700;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
 }
 @media only screen and (max-width: 576px) {
   .main-style {
