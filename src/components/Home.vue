@@ -1,7 +1,7 @@
 <template>
   <div class="main-style">
     <b-container>
-      <div class="projects mt-0 mb-5 pb-3">
+      <div class="projects mb-3">
         <div>About Me</div>
         <img src="@/assets/images/arr.png" width="80" alt="arrow" />
       </div>
@@ -58,12 +58,15 @@
               <div class="right-underline"></div>
             </div>
             <div>
-              <b-row class="w-100 mb-3" style="justify-content: space-between">
+              <b-row
+                class="w-100 mb-3 g-2"
+                style="justify-content: space-between"
+              >
                 <b-col lg="3" class="soft-skill">Project management</b-col>
                 <b-col lg="3" class="soft-skill">Strong decision maker</b-col>
                 <b-col lg="3" class="soft-skill">Complex problem solver</b-col>
               </b-row>
-              <b-row class="w-100" style="justify-content: space-between">
+              <b-row class="w-100 g-2" style="justify-content: space-between">
                 <b-col lg="3" class="soft-skill">Teamwork</b-col>
                 <b-col lg="3" class="soft-skill">Fast Learner</b-col>
                 <b-col lg="3" class="soft-skill">Motivated</b-col>
@@ -73,7 +76,10 @@
               <div>My Programming Skills</div>
               <div class="right-underline"></div>
             </div>
-            <b-row class="w-100 mb-3" style="justify-content: space-between">
+            <b-row
+              class="w-100 mb-3 g-2"
+              style="justify-content: space-between"
+            >
               <b-col lg="3" class="d-flex align-items-center skill-name">
                 <div>HTML</div>
                 <div><Stars :rate="85" /></div>
@@ -87,7 +93,10 @@
                 <div><Stars :rate="75" /></div>
               </b-col>
             </b-row>
-            <b-row class="w-100 mb-3" style="justify-content: space-between">
+            <b-row
+              class="w-100 mb-3 g-2"
+              style="justify-content: space-between"
+            >
               <b-col lg="3" class="d-flex align-items-center skill-name">
                 <div>Vue.js</div>
                 <div><Stars :rate="85" /></div>
@@ -101,7 +110,10 @@
                 <div><Stars :rate="70" /></div>
               </b-col>
             </b-row>
-            <b-row class="w-100 mb-3" style="justify-content: space-between">
+            <b-row
+              class="w-100 mb-3 g-2"
+              style="justify-content: space-between"
+            >
               <b-col lg="3" class="d-flex align-items-center skill-name">
                 <div>Bootstrap</div>
                 <div><Stars :rate="80" /></div>
@@ -115,7 +127,7 @@
                 <div><Stars :rate="60" /></div>
               </b-col>
             </b-row>
-            <b-row class="w-100" style="justify-content: space-between">
+            <b-row class="w-100 g-2" style="justify-content: space-between">
               <b-col lg="3" class="d-flex align-items-center skill-name">
                 <div>React</div>
                 <div><Stars :rate="50" /></div>
@@ -134,7 +146,7 @@
       </b-row>
     </b-container>
     <b-container>
-      <div class="projects">Projects</div>
+      <div class="projects">My Projects</div>
       <div class="arrows">
         <div
           class="stacks"
@@ -249,9 +261,37 @@
       </b-row>
     </b-container>
     <b-container>
-        <div class="projects">
-        <div>Contacts</div>
+      <div class="projects mb-3">
+        <div>Contact Me</div>
         <img src="@/assets/images/arr.png" width="80" alt="arrow" />
+      </div>
+      <div class="contacts">
+        <b-row>
+          <b-col lg="12">
+            <div>
+              <div>Name:</div>
+              <div></div>
+            </div>
+          </b-col>
+          <b-col lg="12">
+            <div>
+              <div>Email:</div>
+              <div></div>
+            </div>
+          </b-col>
+          <b-col lg="12">
+            <div>
+              <div>Subject:</div>
+              <div></div>
+            </div>
+          </b-col>
+          <b-col lg="12">
+            <div>
+              <div>Message:</div>
+              <div></div>
+            </div>
+          </b-col>
+        </b-row>
       </div>
     </b-container>
   </div>
@@ -317,9 +357,23 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 50px;
+  height: max-content;
   font-weight: 700;
   font-size: 40px;
+}
+.contacts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+  font-weight: 700;
+  box-shadow: 0px 40px 64px -12px rgba(0, 0, 0, 0.08),
+    0px 0px 14px -4px rgba(0, 0, 0, 0.05), 0px 32px 48px -8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 25px;
+  background-color: white;
 }
 .project {
   box-shadow: 0px 40px 64px -12px rgba(0, 0, 0, 0.08),
@@ -332,7 +386,7 @@ export default {
   align-items: center;
 }
 .main-style {
-  padding: 80px 50px;
+  padding: 0 50px;
   min-height: 100vh;
   height: 100%;
   overflow-x: hidden;
