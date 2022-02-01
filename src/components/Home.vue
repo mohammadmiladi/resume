@@ -1,6 +1,10 @@
 <template>
   <div class="main-style">
     <b-container>
+      <div class="projects mt-0 mb-5 pb-3">
+        <div>About Me</div>
+        <img src="@/assets/images/arr.png" width="80" alt="arrow" />
+      </div>
       <b-row>
         <b-col lg="3">
           <div class="left-side">
@@ -167,46 +171,88 @@
           />
         </div>
       </div>
-      <b-row v-if="projectName == 'vue'" class="g-5">
+      <b-row v-if="projectName == 'vue'" class="g-3" style="min-height: 400px">
         <b-col lg="4">
-          <div class="project">hi</div>
+          <div class="project">
+            <div class="project-title">KookBaz Admin Panel</div>
+          </div>
         </b-col>
         <b-col lg="4">
-          <div class="project">hi</div>
+          <div class="project">
+            <div class="project-title">IvaBit Admin Panel</div>
+          </div>
         </b-col>
         <b-col lg="4">
-          <div class="project">hi</div>
+          <div class="project">
+            <div class="project-title">ParsToys Admin Panel</div>
+          </div>
         </b-col>
         <b-col lg="4">
-          <div class="project">hi</div>
+          <div class="project">
+            <div class="project-title">BitBarg</div>
+          </div>
         </b-col>
         <b-col lg="4">
-          <div class="project">hi</div>
+          <div class="project">
+            <div class="project-title">Landak</div>
+          </div>
         </b-col>
         <b-col lg="4">
-          <div class="project">hi</div>
+          <div class="project">
+            <div class="project-title">Trustio</div>
+          </div>
+        </b-col>
+        <b-col lg="4">
+          <div class="project">
+            <div class="project-title">DadBanan Dana</div>
+          </div>
+        </b-col>
+        <b-col lg="4">
+          <div class="project">
+            <div class="project-title">Biz School</div>
+          </div>
         </b-col>
       </b-row>
-      <b-row v-if="projectName == 'react'" class="g-5">
+      <b-row
+        v-if="projectName == 'react'"
+        class="g-3"
+        style="min-height: 400px"
+      >
         <b-col lg="4">
-          <div class="project">1</div>
+          <div class="project">
+            <div class="project-title">Kookbaz Shop</div>
+            <div></div>
+          </div>
         </b-col>
         <b-col lg="4">
-          <div class="project">2</div>
+          <div class="project">
+            <div class="project-title">Tehran Swimming Questionnaire</div>
+          </div>
         </b-col>
         <b-col lg="4">
-          <div class="project">3</div>
+          <div class="project">
+            <div class="project-title">IvaBit</div>
+          </div>
         </b-col>
         <b-col lg="4">
-          <div class="project">4</div>
+          <div class="project">
+            <div class="project-title">
+              FootBall Resualt Monitoring (practice)
+            </div>
+          </div>
         </b-col>
         <b-col lg="4">
-          <div class="project">5</div>
-        </b-col>
-        <b-col lg="4">
-          <div class="project">6</div>
+          <div class="project">
+            <div class="project-title">Todo list (Practice)</div>
+          </div>
         </b-col>
       </b-row>
+    </b-container>
+    <b-container>
+        <div class="projects">
+        <div>Contacts</div>
+        <img src="@/assets/images/arr.png" width="80" alt="arrow" />
+      </div>
     </b-container>
   </div>
 </template>
@@ -246,6 +292,10 @@ export default {
 .stack-logo {
   width: 50px;
 }
+.project-title {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
 .stacks {
   display: flex;
   justify-content: center;
@@ -264,6 +314,7 @@ export default {
   width: 100%;
   margin-top: 40px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 50px;
