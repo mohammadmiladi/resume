@@ -317,8 +317,13 @@ export default {
 </script>
 
 <style scoped>
+@font-face {
+  font-family: "SFPro";
+  src: local("SFPro"), url(../assets/fonts/SFPro.ttf) format("truetype");
+}
 * {
   scroll-behavior: smooth;
+  font-family: "SFPro";
 }
 .arrows {
   display: flex;
