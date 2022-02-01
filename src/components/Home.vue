@@ -129,6 +129,85 @@
         </b-col>
       </b-row>
     </b-container>
+    <b-container>
+      <div class="projects">Projects</div>
+      <div class="arrows">
+        <div
+          class="stacks"
+          :style="projectName == 'react' && 'background: #8785ff'"
+          @click="changeStack('react')"
+        >
+          <div>React</div>
+          <img
+            class="stack-logo"
+            src="@/assets/images/react.png"
+            alt="react-logo"
+          />
+        </div>
+        <img
+          class="arrow-width"
+          src="@/assets/images/left.png"
+          alt="left-arrow"
+        />
+        <img
+          class="arrow-width"
+          src="@/assets/images/right.png"
+          alt="right-arrow"
+        />
+        <div
+          class="stacks"
+          :style="projectName == 'vue' && 'background: #8785ff'"
+          @click="changeStack('vue')"
+        >
+          <div>Vue</div>
+          <img
+            class="stack-logo"
+            src="@/assets/images/vue.png"
+            alt="vue-logo"
+          />
+        </div>
+      </div>
+      <b-row v-if="projectName == 'vue'" class="g-5">
+        <b-col lg="4">
+          <div class="project">hi</div>
+        </b-col>
+        <b-col lg="4">
+          <div class="project">hi</div>
+        </b-col>
+        <b-col lg="4">
+          <div class="project">hi</div>
+        </b-col>
+        <b-col lg="4">
+          <div class="project">hi</div>
+        </b-col>
+        <b-col lg="4">
+          <div class="project">hi</div>
+        </b-col>
+        <b-col lg="4">
+          <div class="project">hi</div>
+        </b-col>
+      </b-row>
+      <b-row v-if="projectName == 'react'" class="g-5">
+        <b-col lg="4">
+          <div class="project">1</div>
+        </b-col>
+        <b-col lg="4">
+          <div class="project">2</div>
+        </b-col>
+        <b-col lg="4">
+          <div class="project">3</div>
+        </b-col>
+        <b-col lg="4">
+          <div class="project">4</div>
+        </b-col>
+        <b-col lg="4">
+          <div class="project">5</div>
+        </b-col>
+        <b-col lg="4">
+          <div class="project">6</div>
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
@@ -138,14 +217,74 @@ export default {
   components: {
     Stars,
   },
+  data() {
+    return {
+      projectName: "vue",
+    };
+  },
+  methods: {
+    changeStack(payload) {
+      this.projectName = payload;
+    },
+  },
 };
 </script>
 
 <style scoped>
+* {
+  scroll-behavior: smooth;
+}
+.arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.arrow-width {
+  width: 100px;
+}
+.stack-logo {
+  width: 50px;
+}
+.stacks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 20px;
+  padding: 10px 30px;
+  background: white;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.stacks:hover {
+  background: whitesmoke;
+}
+.projects {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  font-weight: 700;
+  font-size: 40px;
+}
+.project {
+  box-shadow: 0px 40px 64px -12px rgba(0, 0, 0, 0.08),
+    0px 0px 14px -4px rgba(0, 0, 0, 0.05), 0px 32px 48px -8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 25px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .main-style {
   padding: 80px 50px;
   min-height: 100vh;
   height: 100%;
+  overflow-x: hidden;
   background-color: rgb(222, 232, 238);
 }
 .left-side {
@@ -162,7 +301,7 @@ export default {
   border-radius: 8px;
   padding: 25px;
   background-color: white;
-  min-height: 550px;
+  min-height: 767px;
 }
 .blue-block {
   background-color: rgb(0 97 217);
@@ -195,8 +334,7 @@ export default {
 }
 .right-title {
   font-size: 20px;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin: 30px 0;
   font-weight: 700;
   color: rgb(15 56 149);
 }
@@ -242,6 +380,11 @@ export default {
   background: #ededff;
 }
 @media only screen and (max-width: 576px) {
+  .arrow-width {
+    width: 70px;
+  }
+}
+@media only screen and (max-width: 576px) {
   .main-style {
     padding: 5px;
   }
@@ -250,6 +393,15 @@ export default {
   }
   .soft-skill {
     margin-bottom: 20px;
+  }
+  .arrow-width {
+    width: 50px;
+  }
+  .stacks {
+    padding: 10px;
+  }
+  .stack-logo {
+    width: 30px;
   }
 }
 </style>
