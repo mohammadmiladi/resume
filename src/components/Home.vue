@@ -266,31 +266,66 @@
         <img src="@/assets/images/arr.png" width="80" alt="arrow" />
       </div>
       <div class="contacts">
-        <b-row>
-          <b-col lg="12">
+        <b-row style="width: 100%">
+          <form ref="form" @submit.prevent="sendEmail">
+            <b-col lg="12">
+              <div>
+                <div>Name:</div>
+                <div>
+                  <input
+                    class="input-style"
+                    name="user_name"
+                    type="text"
+                    placeholder="Name"
+                  />
+                </div>
+              </div>
+            </b-col>
+            <b-col lg="12">
+              <div>
+                <div>Email:</div>
+                <div>
+                  <input
+                    class="input-style"
+                    name="user_email"
+                    type="email"
+                    placeholder="Email"
+                  />
+                </div>
+              </div>
+            </b-col>
+            <b-col lg="12">
+              <div>
+                <div>Subject:</div>
+                <div>
+                  <input
+                    name="user_subject"
+                    class="input-style"
+                    type="text"
+                    placeholder="Subject"
+                  />
+                </div>
+              </div>
+            </b-col>
+            <b-col lg="12">
+              <div>
+                <div>Message:</div>
+                <div>
+                  <textarea
+                    class="input-style"
+                    name="message"
+                    placeholder="Message"
+                    id=""
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                </div>
+              </div>
+            </b-col>
             <div>
-              <div>Name:</div>
-              <div></div>
+              <button type="submit" class="submit-style">Submit</button>
             </div>
-          </b-col>
-          <b-col lg="12">
-            <div>
-              <div>Email:</div>
-              <div></div>
-            </div>
-          </b-col>
-          <b-col lg="12">
-            <div>
-              <div>Subject:</div>
-              <div></div>
-            </div>
-          </b-col>
-          <b-col lg="12">
-            <div>
-              <div>Message:</div>
-              <div></div>
-            </div>
-          </b-col>
+          </form>
         </b-row>
       </div>
     </b-container>
@@ -299,6 +334,8 @@
 
 <script>
 import Stars from "../components/Stars.vue";
+import emailjs from "@emailjs/browser";
+
 export default {
   components: {
     Stars,
@@ -311,6 +348,23 @@ export default {
   methods: {
     changeStack(payload) {
       this.projectName = payload;
+    },
+    sendEmail() {
+      emailjs
+        .sendForm(
+          "service_ur4zlos",
+          "template_mz49st8",
+          this.$refs.form,
+          "user_KLqzX4eym7Xj5H5GOEQnL"
+        )
+        .then(
+          (result) => {
+            console.log("SUCCESS!", result.text);
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+          }
+        );
     },
   },
 };
@@ -366,12 +420,28 @@ export default {
   font-weight: 700;
   font-size: 40px;
 }
+.input-style {
+  width: 100%;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 4px;
+  padding: 5px;
+}
+.input-style:focus {
+  outline: none;
+}
+.submit-style {
+  background-color: rgb(63, 63, 180);
+  color: white;
+  border: 1px solid rgb(53, 53, 194);
+  border-radius: 5px;
+  padding: 5px 12px;
+}
 .contacts {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: max-content;
   font-weight: 700;
   box-shadow: 0px 40px 64px -12px rgba(0, 0, 0, 0.08),
